@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Juego_escape_espacial/.idea/Juego_escape_espacial.iml" filepath="$PROJECT_DIR$/../Juego_escape_espacial/.idea/Juego_escape_espacial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Programa5_elif_TestMariwano.iml" filepath="$PROJECT_DIR$/.idea/Programa5_elif_TestMariwano.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa6_elif_EleccionCel/.idea/Programa6_elif_EleccionCel.iml" filepath="$PROJECT_DIR$/../Programa6_elif_EleccionCel/.idea/Programa6_elif_EleccionCel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa7_FIN_juego_ifs/.idea/Programa7_FIN_juego_ifs.iml" filepath="$PROJECT_DIR$/../Programa7_FIN_juego_ifs/.idea/Programa7_FIN_juego_ifs.iml" />
+    </modules>
+  </component>
+</project>

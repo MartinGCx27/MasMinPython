@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Programa10_Detectar_for/.idea/Programa10_Detectar_for.iml" filepath="$PROJECT_DIR$/../Programa10_Detectar_for/.idea/Programa10_Detectar_for.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa7_FIN_juego_ifs/.idea/Programa7_FIN_juego_ifs.iml" filepath="$PROJECT_DIR$/../Programa7_FIN_juego_ifs/.idea/Programa7_FIN_juego_ifs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Programa8_batalla_pkmn_while.iml" filepath="$PROJECT_DIR$/.idea/Programa8_batalla_pkmn_while.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa9_Lista_compra_Listas/.idea/Programa9_Lista_compra_Listas.iml" filepath="$PROJECT_DIR$/../Programa9_Lista_compra_Listas/.idea/Programa9_Lista_compra_Listas.iml" />
+    </modules>
+  </component>
+</project>

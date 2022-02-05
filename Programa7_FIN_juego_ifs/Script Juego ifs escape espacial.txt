@@ -1,0 +1,104 @@
+JUEGO DE ESCAPE
+--------------------
+
+Al fin conseguiste hacerte con el Enchiridion, en el venía la ubicación exacta de la lanza de longinus
+la cual conseguiste despues derrotar al terramorfo eridiano, ya en la huida se quedo sin combustible tu 
+motocicleta hyliana, así que te escabuiste en el going merry la nave más cercana para huir de ahi.
+Ya en el espacio te das cuenta que la nave es de una compañia de cazarrecompenzas y el valor de tu cabeza
+acaba de alcanzar el top #1 de la galaxia, esperas toda la noche para empezar tu huida, sales por fin del
+sistema de desague ves 2 habitaciones al final del pasillo una que proyecta una luz verde y otra que tiene
+que emana un fuerte ruido ¿A donde te dirijes?
+[OPCION (A): Puerta luz verde]  |  [OPCION (B): Puerta fuerte ruido]
+
+[OPCION (A) Puerta luz verde]
+	Descubres que la luz verde es un portal interdimensional que esta usando Rick Sanchez para escapar
+	¿Que haces?
+	[OPCION (A): Entras al portal]  |  [OPCION (B): Sales del cuarto]
+		
+		[OPCION (A) Entras al portal]
+			El portal te lleva a otra dimensión, lograste escapar pero te percatas que vas cayendo directamente
+			a un volcan de LCL, al entrar en contacto con el, mueres en tu forma fisica y te haces uno mismo 
+			con el todo, ahora eres parte de la instrumentalización humana OMEDETTO!  
+			|FIN|
+			
+		[OPCION (B) Sales del cuarto]
+			Sales del cuarto y sigues escabullendote entre las sombras, encuentras el diagrama de la nave,
+			notas dos posibles rutas de escape la primera a traves de la capsula de escape de la sala de control
+			y la segunda por la salida de emergencia ¿Por cual decides huir
+			[OPCION (A): Capsula de escape]  |  [OPCION (B): Salida de emergencia]
+			
+			[OPCION (A) Capsula de escape]
+				Logras llegar hasta la sala de control, echas un vistazo y ves que esta los 3 pilotos estan
+				durmiendo, la nave se encuentra en piloto automatico, debes encontrar la capsula de escape
+				tu...
+				[OPCION (A): Entras a escondidas e investigo la sala de control sin despertar a los pilotos]  |  
+				[OPCION (B): Aprovechas que los pilotos estan dormidos y amagas a uno para interrogarlo]
+				
+					[OPCION (A): Entro a escondidas e investigo la sala de control sin despertar a los pilotos]
+						Haces mucho ruido al tirar la  taza favorita del capitan, te amagan entre todos y te criogenizan.
+						|FIN|
+				
+					[OPCION (B): Aprovechas que los pilotos estan dormidos y amagas a uno para interrogarlo]
+						El piloto que interrogas dice ser un fan tuyo y que para llegar a la capsula debes presionar el
+						botón de despegue 3 veces seguidas, ¿Lo presionaras?
+						[OPCION (A): Sí]  |  [OPCION (B): No]
+				
+						[OPCION (A): Sí]
+							Resultó ser veridica la información, se abre la compuerta de la capsula de escape y sales disparado
+							en ella, ves los anillos de saturno mientras bebes de la dulce copa de la victoria.
+						
+						[OPCION (B): No]
+							Decides no creerle y lo golpeas para que diga la verdad, el ruido del interrogatorio despierta a
+							los demas pilotos, te encuentran y te verguean.
+							|FIN|
+				
+			
+			[OPCION (B) Salida de emergencia]
+				La salida de emergencia siempre se encuentra custodiada, te congelan en carbonita y cobran tu recompensa.
+				|FIN|
+		
+[OPCION (B) Puerta fuerte ruido]
+	Ves a un tipo creando una nueva especie de pistola de rayos plasmaticos solares, los tubos de fisión que ocupa de
+	cartuchos hacen el ruido que escuchaste, es ruidosa pero podría servirte ¿Quieres tomar el arma?
+	[OPCION (A): Sí]  |  [OPCION (B): No]
+
+		[OPCION (A): Sí]
+						
+		[OPCION (B): No]
+	
+	Sigues tu camino en busca de la salida, llegas al calabozo de la nave donde tienen a los individuos por los cuales
+	cobraran su recompensa, uno de ellos te asegura que puede ayudarte a llegar a escapar sano y sano de la nave si lo
+	libereas, lo liberas y te dice que antes de colaborar contigo debe hacer una comprobación rápida tipica de su 
+	planeta natal, adopata su verdadera forma saliendo desde su ano la cabeza de lo que parece ser un pulpo
+	y formando con las demas extremidades sus tentaculos, te pregunta que cual es el resultado de 27 * (número aleatorio)
+	[OPCION (A): Respuesta correcta]  |  [OPCION (B): Respuesta incorrecta]
+
+		[OPCION (A): Respuesta correcta]
+		El pulpo te absorbe desde lo que anteriormente era su ano y mueres no sin antes comprobar por el aroma que si lo
+		ocupaba para lo mismo que tu, resulta que no tolera a los cerebritos.
+						
+		[OPCION (B): Respuesta incorrecta]
+		Orgalorg te muestra un mapa donde indica que la capsula de escape se encuentra en el centro de mando, memorizas la ruta más rápida
+		y se separan, él ira a buscar venganza de quien lo atrapo. Tu subes al ducto de ventilación para pasar desapercibido pero 
+		despues de algunos minutos caes al centro de reciclaje gracias a un tornillo suelto en el ducto, dentro del centro de reciclaje
+		encuentras los unicos horarios de apertura de puertas tu...
+		[OPCION (A): Esperas pacientemente hasta que lo abran para huir]  |  [OPCION (B): Forzar la puerta]
+			
+			[OPCION (A): Esperas pacientemente hasta que lo abran para huir]
+				Te enteras por qué solo abren a ciertas horas el centro de reciclaje, de la oscuridad comienzan a salir
+				skags tragabasura, disparas un par de veces pero es una plaga entera te comen hasta las entrañas.
+				|FIN|
+			
+			[OPCION (B): con la pistola]
+				Tomas la pistola que tomaste antes y disparas a la puerta y descubres que funciona perfectamente para perforar las puertas
+				y paredes de la nave llegas a la habitacipon justo encima de la capsula de escape y disparas al suelo, caes justo enfrente
+				de la capsula de escape, los pilotos se dan cuenta pero es demasiado tarde, subes y logras escapar en el camino
+				ves los anillos de saturno mientras bebes de la dulce copa de la victoria.
+				|FIN|
+				
+			[OPCION (B): sin la pistola]
+				Descubres que las puertas y paredes de la nave son muy delgadas, si tan solo tuvieras algún arma...
+				Pero no la tienes así que quedas atrapado.
+				de la oscuridad comienzan a salir skags tragabasura, es una plaga entera te comen hasta las entrañas.
+				|FIN|
+				

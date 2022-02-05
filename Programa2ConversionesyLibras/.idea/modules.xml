@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Clase1/.idea/Clase1.iml" filepath="$PROJECT_DIR$/../Clase1/.idea/Clase1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa2ConversionesyLibras/.idea/Programa2ConversionesLibras.iml" filepath="$PROJECT_DIR$/../Programa2ConversionesyLibras/.idea/Programa2ConversionesLibras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa3_IF_Colacao/.idea/Programa3_IF_Colacao.iml" filepath="$PROJECT_DIR$/../Programa3_IF_Colacao/.idea/Programa3_IF_Colacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programa4_OperadoresLogicos/.idea/Programa4_OperadoresLogicos.iml" filepath="$PROJECT_DIR$/../Programa4_OperadoresLogicos/.idea/Programa4_OperadoresLogicos.iml" />
+    </modules>
+  </component>
+</project>
