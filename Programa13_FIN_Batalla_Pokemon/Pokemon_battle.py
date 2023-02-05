@@ -53,7 +53,8 @@ def batallaPokemon():
                                                             vida_charizard, VIDA_TOTAL_CHARIZARD))
 
         input("Enter para continuar...")
-        os.system("cls")
+        #os.system("cls")
+        os.system("clear")
 
         if (vida_rayquaza <= 0 or vida_charizard <= 0) and vida_rayquaza > vida_charizard:
             print("Rayquaza Gana!")
@@ -108,13 +109,13 @@ def batallaPokemon():
             print("La vida de Rayquaza es:  [" + "#" * int(barra_rayquaza) + " " * (10 - int(barra_rayquaza)) +
                 "] ({}/{})".format(vida_rayquaza, VIDA_TOTAL_RAYQUAZA))
 
-
-
     if vida_rayquaza > vida_charizard:
         print("Rayquaza Gana!")
     else:
         print("Charizard Gana!")
- 
+    
+    #os.system("cls")
+    os.system("clear")
 
 
 #Primero definimos constantes con el nombre de la variable en mayuscula
@@ -167,17 +168,19 @@ pokemons_contrincantes = {
     "Lapras": ""
 }
 
+lanzar_batalla = False
+
+# GENERATE MAP OBJECTS ON THE MAP RANDOMLY EVER CONTAINS 4 PIECES
+while len(map_objects) < NUM_OF_MAP_OBJECTS:
+    new_position = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
+
+    if new_position not in map_objects and new_position != my_position and obstacle_definition[new_position[POS_Y]] [new_position[POS_X]] != "#":
+        map_objects.append(new_position)
+
+
 while not died:
 
-    # GENERATE MAP OBJECTS ON THE MAP RANDOMLY EVER CONTAINS 4 PIECES
-    while len(map_objects) < NUM_OF_MAP_OBJECTS:
-        new_position = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
-
-        if new_position not in map_objects and new_position != my_position and obstacle_definition[new_position[POS_Y]] [new_position[POS_X]] != "#":
-            map_objects.append(new_position)
-
     # DRAW MAP
-
     #Pinta el borde superior del mapa
     print("+" + "-" * (MAP_WIDTH * 2) + "+")
     #Pinta los bordes en cada columna
@@ -203,12 +206,19 @@ while not died:
 
                 if object_in_cell: #Si existe valor en objects_in_cell, lo borra de nuestra lista principal map_objects
                     map_objects.remove(object_in_cell)#Cuando pasamos por un objeto nos sobreponemos y lo eliminamos
-                    batallaPokemon()
+                    lanzar_batalla = True
 
             #else:
             print("{}".format(char_to_draw), end="")
         print("|")
     print("+" + "-" * (MAP_WIDTH * 2) + "+")
+
+    if lanzar_batalla:
+        os.system("clear")
+        batallaPokemon()
+        os.system("clear")
+
+    lanzar_batalla = False
     # print("La cola: {}".format(tail))
     # print("Mi posición: {}".format(my_position))
 
@@ -219,7 +229,8 @@ while not died:
                 #Libreria para que en automatico lea el caracter que insertamos, sin necesidad de dar al enter
                 #solo funciona en el terminal, y nos devuelve lo capturado como byte por eso necesita el .decode
 
-    direction = readchar.readchar().decode()
+    direction = readchar.readchar()
+    #direction = readchar.readchar().decode()
     new_position = None
     if direction == "W":
         new_position = [my_position[POS_X], (my_position[POS_Y] - 1) % MAP_HEIGHT]
@@ -264,120 +275,10 @@ while not died:
     # elif my_position[POS_Y] > MAP_HEIGHT - 1:
     #     my_position[POS_Y] = 0
 
-    os.system("cls")
+    #os.system("cls")
+    os.system("clear")
 
 if died:
     sys.exit("G A M E - O V E R"
                   "\nMAMAWEBO!")
     #print("Has muerto")
-
-
-def batallaPokemon():
-    from random import randint
-    import os
-
-    VIDA_TOTAL_RAYQUAZA = 40
-    VIDA_TOTAL_CHARIZARD = 60
-
-    vida_rayquaza = VIDA_TOTAL_RAYQUAZA
-    vida_charizard = VIDA_TOTAL_CHARIZARD
-
-    barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA)*10
-    barra_charizard = (vida_charizard / VIDA_TOTAL_CHARIZARD)*10
-
-
-    #Mientra alguno de los 2 pkmns tenga vida, se desenvuelve el combate
-    while vida_rayquaza > 0 and vida_charizard > 0:
-        #Forma de hacer la barra que a mi se me ocurrio                 Es importante meter las operaciones entre parentesis
-        print("\nLa vida de Rayquaza es:  [" + "#" * int(barra_rayquaza) + " " * (10 - int(barra_rayquaza)) + "] ({}/{})"
-            .format(vida_rayquaza, VIDA_TOTAL_RAYQUAZA))
-
-        #Forma más optimizada (del curso)
-        print("La vida de Charizard es: [{}{}] ({}/{}".format("#" * int(barra_charizard), " " * (10 - int(barra_charizard)),
-                                                            vida_charizard, VIDA_TOTAL_CHARIZARD))
-        #Turno Rayquaza
-        print("\n###Turno Rayquaza###")
-        ataque_rayquaza = randint(1, 2)
-        if ataque_rayquaza == 1:
-            #Corte aereo
-            print("Rayquaza ataca con Corte aereo")
-            vida_charizard -= 10
-
-        else:
-            # Cola dragon
-            print("Rayquaza ataca con Cola dragon")
-            vida_charizard -= 11
-
-        if vida_charizard < 0:
-            vida_charizard = 0
-
-        if vida_rayquaza < 0:
-            vida_rayquaza = 0
-
-        barra_charizard = (vida_charizard / VIDA_TOTAL_CHARIZARD) * 10
-        print("La vida de Charizard es: [{}{}] ({}/{}".format("#" * int(barra_charizard), " " * (10 - int(barra_charizard)),
-                                                            vida_charizard, VIDA_TOTAL_CHARIZARD))
-
-        input("Enter para continuar...")
-        os.system("cls")
-
-        if (vida_rayquaza <= 0 or vida_charizard <= 0) and vida_rayquaza > vida_charizard:
-            print("Rayquaza Gana!")
-            exit()
-
-        elif(vida_rayquaza <= 0 or vida_charizard) <= 0 and vida_rayquaza < vida_charizard:
-            print("Charizard Gana!")
-            exit()
-
-        ataque_charizard = None
-
-        #La primera es la forma más optima, implementando la estructura de listas [] sin ser una variable, abajo esta otra forma de hacerlo más primitiva
-        while ataque_charizard not in ["S", "A", "M", "N"]: # No ocupamos operadores logicos ya que en automatico entiende que si la operación logica es True se ejecutará y como Ciertamente ataque_charizard no es niguno de la lista procede a ejecutar el código que pregunta
-        # while ataque_charizard != "S" and ataque_charizard != "A" and ataque_charizard != "M" and ataque_charizard != "N":
-            print("\n###Turno Charizard###")
-            ataque_charizard = input("Selecciona el ataque de Charizard:\n"
-                                    "[S]ofoco.\n"
-                                    "[A]taque ala.\n"
-                                    "[M]ovimiento aismico.\n"
-                                    "[N]ada\n")
-            if ataque_charizard == "S":
-                #Sofoco
-                print("Charizard ataca con Sofoco")
-                vida_rayquaza -= 12
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
-
-            elif ataque_charizard == "A":
-                #Ataque ala
-                print("Charizard ataca con Ataque ala")
-                vida_rayquaza -= 10
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
-
-            elif ataque_charizard == "M":
-                #Movimiento sismico
-                print("Charizard ataca con Movimiento sismico")
-                vida_rayquaza -= 11
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
-
-
-            elif ataque_charizard == "N":
-                print("Charizard no hace nada...")
-
-            else:
-                print("Selecciona un ataque valido")
-
-            if vida_charizard < 0:
-                vida_charizard = 0
-
-            if vida_rayquaza < 0:
-                vida_rayquaza = 0
-
-            print("La vida de Rayquaza es:  [" + "#" * int(barra_rayquaza) + " " * (10 - int(barra_rayquaza)) +
-                "] ({}/{})".format(vida_rayquaza, VIDA_TOTAL_RAYQUAZA))
-
-
-
-    if vida_rayquaza > vida_charizard:
-        print("Rayquaza Gana!")
-    else:
-        print("Charizard Gana!")
-    
