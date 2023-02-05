@@ -58,7 +58,7 @@ if res == "A":
                           "|FIN|\n")
                     exit()
                 else:
-                    print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+                    print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
                     exit()
 
             else:
@@ -70,10 +70,10 @@ if res == "A":
                   "|FIN|\n")
             exit()
         else:
-            print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+            print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
             exit()
     else:
-        print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+        print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
         exit()
 
 elif res == "B":
@@ -89,7 +89,7 @@ elif res == "B":
         arma = False
         print("No te llevas el arma, te parece muy ruidosa, puede ser lo mejor.\n")
     else:
-        print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+        print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
         exit()
 
     num_alea = random.randint(1,100)
@@ -131,12 +131,12 @@ elif res == "B":
                   "|FIN|\n")
             exit()
         else:
-            print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+            print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
             exit()
     else:
-        print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+        print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
         exit()
 
 else:
-    print("Krnalito ya no fumes ingresaste algun caracter extraño las opciones solo son A o B")
+    print("Krnalito ya no fumes ingresaste alguna mamada las opciones solo son A o B")
     exit()

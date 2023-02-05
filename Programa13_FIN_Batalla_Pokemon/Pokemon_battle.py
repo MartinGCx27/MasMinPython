@@ -6,61 +6,55 @@ import readchar
 
 
 
-def batallaPokemon():
+def batallaPokemon(dict_pokemons, clave_pkmn):
     from random import randint
     import os
 
-    VIDA_TOTAL_RAYQUAZA = 40
-    VIDA_TOTAL_CHARIZARD = 60
+    VIDA_TOTAL_PKM = 40
+    VIDA_TOTAL_CHARIZARD = 50
 
-    vida_rayquaza = VIDA_TOTAL_RAYQUAZA
+    vida_pkm = VIDA_TOTAL_PKM
     vida_charizard = VIDA_TOTAL_CHARIZARD
 
-    barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA)*10
+    barra_pkm = (vida_pkm / VIDA_TOTAL_PKM)*10
     barra_charizard = (vida_charizard / VIDA_TOTAL_CHARIZARD)*10
 
 
     #Mientra alguno de los 2 pkmns tenga vida, se desenvuelve el combate
-    while vida_rayquaza > 0 and vida_charizard > 0:
+    while vida_pkm > 0 and vida_charizard > 0:
         #Forma de hacer la barra que a mi se me ocurrio                 Es importante meter las operaciones entre parentesis
-        print("\nLa vida de Rayquaza es:  [" + "#" * int(barra_rayquaza) + " " * (10 - int(barra_rayquaza)) + "] ({}/{})"
-            .format(vida_rayquaza, VIDA_TOTAL_RAYQUAZA))
+        print("\nLa vida de ",clave_pkmn, "es:  [" + "#" * int(barra_pkm) + " " * (10 - int(barra_pkm)) + "] ({}/{})"
+            .format(vida_pkm, VIDA_TOTAL_PKM))
 
         #Forma más optimizada (del curso)
         print("La vida de Charizard es: [{}{}] ({}/{}".format("#" * int(barra_charizard), " " * (10 - int(barra_charizard)),
                                                             vida_charizard, VIDA_TOTAL_CHARIZARD))
-        #Turno Rayquaza
-        print("\n###Turno Rayquaza###")
-        ataque_rayquaza = randint(1, 2)
-        if ataque_rayquaza == 1:
-            #Corte aereo
-            print("Rayquaza ataca con Corte aereo")
-            vida_charizard -= 10
-
-        else:
-            # Cola dragon
-            print("Rayquaza ataca con Cola dragon")
-            vida_charizard -= 11
+        #Turno PKM
+        print("\n###Turno ", clave_pkmn, "###")
+        ataque_pkmn = randint(0, 3)
+    
+        print(clave_pkmn, " ataca con ", dict_pokemons[clave_pkmn][ataque_pkmn],"\n")
+        vida_charizard -= 10
 
         if vida_charizard < 0:
             vida_charizard = 0
 
-        if vida_rayquaza < 0:
-            vida_rayquaza = 0
+        if vida_pkm < 0:
+            vida_pkm = 0
 
         barra_charizard = (vida_charizard / VIDA_TOTAL_CHARIZARD) * 10
-        print("La vida de Charizard es: [{}{}] ({}/{}".format("#" * int(barra_charizard), " " * (10 - int(barra_charizard)),
+        print("La vida de Charizard baja a: [{}{}] ({}/{}".format("#" * int(barra_charizard), " " * (10 - int(barra_charizard)),
                                                             vida_charizard, VIDA_TOTAL_CHARIZARD))
 
         input("Enter para continuar...")
-        #os.system("cls")
-        os.system("clear")
+        os.system("cls")
+        #os.system("clear")
 
-        if (vida_rayquaza <= 0 or vida_charizard <= 0) and vida_rayquaza > vida_charizard:
-            print("Rayquaza Gana!")
+        if (vida_pkm <= 0 or vida_charizard <= 0) and vida_pkm > vida_charizard:
+            print(clave_pkmn, " Gana!")
             exit()
 
-        elif(vida_rayquaza <= 0 or vida_charizard) <= 0 and vida_rayquaza < vida_charizard:
+        elif(vida_pkm <= 0 or vida_charizard) <= 0 and vida_pkm < vida_charizard:
             print("Charizard Gana!")
             exit()
 
@@ -69,6 +63,7 @@ def batallaPokemon():
         #La primera es la forma más optima, implementando la estructura de listas [] sin ser una variable, abajo esta otra forma de hacerlo más primitiva
         while ataque_charizard not in ["S", "A", "M", "N"]: # No ocupamos operadores logicos ya que en automatico entiende que si la operación logica es True se ejecutará y como Ciertamente ataque_charizard no es niguno de la lista procede a ejecutar el código que pregunta
         # while ataque_charizard != "S" and ataque_charizard != "A" and ataque_charizard != "M" and ataque_charizard != "N":
+            os.system("cls")
             print("\n###Turno Charizard###")
             ataque_charizard = input("Selecciona el ataque de Charizard:\n"
                                     "[S]ofoco.\n"
@@ -78,20 +73,20 @@ def batallaPokemon():
             if ataque_charizard == "S":
                 #Sofoco
                 print("Charizard ataca con Sofoco")
-                vida_rayquaza -= 12
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
+                vida_pkm -= 12
+                barra_pkm = (vida_pkm / VIDA_TOTAL_PKM) * 10
 
             elif ataque_charizard == "A":
                 #Ataque ala
                 print("Charizard ataca con Ataque ala")
-                vida_rayquaza -= 10
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
+                vida_pkm -= 10
+                barra_pkm = (vida_pkm / VIDA_TOTAL_PKM) * 10
 
             elif ataque_charizard == "M":
                 #Movimiento sismico
                 print("Charizard ataca con Movimiento sismico")
-                vida_rayquaza -= 11
-                barra_rayquaza = (vida_rayquaza / VIDA_TOTAL_RAYQUAZA) * 10
+                vida_pkm -= 11
+                barra_pkm = (vida_pkm / VIDA_TOTAL_PKM) * 10
 
 
             elif ataque_charizard == "N":
@@ -103,19 +98,23 @@ def batallaPokemon():
             if vida_charizard < 0:
                 vida_charizard = 0
 
-            if vida_rayquaza < 0:
-                vida_rayquaza = 0
+            if vida_pkm < 0:
+                vida_pkm = 0
 
-            print("La vida de Rayquaza es:  [" + "#" * int(barra_rayquaza) + " " * (10 - int(barra_rayquaza)) +
-                "] ({}/{})".format(vida_rayquaza, VIDA_TOTAL_RAYQUAZA))
+            print("La vida de ", clave_pkmn," baja a:  [" + "#" * int(barra_pkm) + " " * (10 - int(barra_pkm)) +
+                "] ({}/{})".format( vida_pkm, VIDA_TOTAL_PKM))
+            
 
-    if vida_rayquaza > vida_charizard:
-        print("Rayquaza Gana!")
+            
+
+    if vida_pkm > vida_charizard:
+        input("\n",clave_pkmn," Gana!\nPresiona Enter para continuar...\n")
+
     else:
-        print("Charizard Gana!")
+        input("\n Charizard Gana!\nPresiona Enter para continuar...\n")
     
-    #os.system("cls")
-    os.system("clear")
+    os.system("cls")
+        #os.system("clear")
 
 
 #Primero definimos constantes con el nombre de la variable en mayuscula
@@ -155,17 +154,19 @@ obstacle_definition = [list(row) for row in obstacle_definition.split("\n")]
 
 #Despues defininimos nuestras variables
 my_position = [19, 14]
-map_objects = []
-tail = []
-tail_length = 0
+map_objects = [] #Guarda las posiciones de los entrenadores a enfrentar
 died = False
+win = False
 
 #Hacemos que el tamaño del mapa este definido por el tamaño de los obstaculos que subamos
 MAP_WIDTH = len(obstacle_definition[0])
 MAP_HEIGHT = len(obstacle_definition)
 
 pokemons_contrincantes = {
-    "Lapras": ""
+    "Lapras": ["Golpe cabeza", "Cascada", "Hidrobomba", "Cola Ferrea"],
+    "Gengar": ["Lenguetazo", "Bomba lodo", "Bola Sombra", "Puño dinamico"],
+    "Scyther": ["Corte", "Ala de acero", "Tajo aereo", "Tijera X"],
+    "Salamance": ["Cola dragon", "Hiperrayo", "Llamarada", "Dragoaliento"]
 }
 
 lanzar_batalla = False
@@ -178,8 +179,7 @@ while len(map_objects) < NUM_OF_MAP_OBJECTS:
         map_objects.append(new_position)
 
 
-while not died:
-
+while not died and not win:
     # DRAW MAP
     #Pinta el borde superior del mapa
     print("+" + "-" * (MAP_WIDTH * 2) + "+")
@@ -190,8 +190,7 @@ while not died:
         for rows in range(MAP_WIDTH):
             char_to_draw = "  " #Manda el espacio para que imprima al final (Mapa)
             object_in_cell = None #Reinicializa la variable a cada iteración
-            tail_in_cell = None #Verifica si hay cola en la celda en la que estamos actualmente
-
+    
             for map_object in map_objects: #Ciclo que pinta objetos en el mapa
                 if map_object[POS_X] == rows and map_object[POS_Y] == columns:#Revisa si en la posición a pintar hay objeto de acuerdo al arreglo con las coordenadas previamente definidas (map_objects)
                     char_to_draw = " *"#Manda el * para que imprima al final (Objeto)
@@ -214,11 +213,24 @@ while not died:
     print("+" + "-" * (MAP_WIDTH * 2) + "+")
 
     if lanzar_batalla:
-        os.system("clear")
-        batallaPokemon()
-        os.system("clear")
+        #os.system("clear")
+        os.system("cls")
+        if len(map_objects) == 3:
+            batallaPokemon(pokemons_contrincantes, "Lapras")
+        elif len(map_objects) == 2:
+            batallaPokemon(pokemons_contrincantes, "Gengar")
+        elif len(map_objects) == 1:
+            batallaPokemon(pokemons_contrincantes, "Scyther")
+        elif len(map_objects) == 0:
+            batallaPokemon(pokemons_contrincantes, "Salamance")
+        #os.system("clear")
+        os.system("cls")
 
     lanzar_batalla = False
+    if len(map_objects) == 0:
+        win = True
+        print("Felicidades haz Ganado el juego!!!")
+
     # print("La cola: {}".format(tail))
     # print("Mi posición: {}".format(my_position))
 
@@ -229,8 +241,8 @@ while not died:
                 #Libreria para que en automatico lea el caracter que insertamos, sin necesidad de dar al enter
                 #solo funciona en el terminal, y nos devuelve lo capturado como byte por eso necesita el .decode
 
-    direction = readchar.readchar()
-    #direction = readchar.readchar().decode()
+    #direction = readchar.readchar()
+    direction = readchar.readchar().decode()
     new_position = None
     if direction == "W":
         new_position = [my_position[POS_X], (my_position[POS_Y] - 1) % MAP_HEIGHT]
@@ -256,8 +268,6 @@ while not died:
 
     if new_position:
         if obstacle_definition[new_position[POS_Y]][new_position[POS_X]] != "#":
-            tail.insert(0, my_position.copy())  # Agrega una copia de nuestra posición actual a la cola
-            tail = tail[:tail_length]  # Muestra la cola de acuerdo a cuanto a comido
             # my_position[POS_Y] += 1 #Estas 2 lineas ahora se calculan en el new_ppsition de cada movimiento
             # my_position[POS_Y] %= MAP_HEIGHT
             # if my_position in tail:#Valida a cada movimiento si no nos hemos comido nuestra cola, para en su caso terminar el juego
@@ -275,10 +285,9 @@ while not died:
     # elif my_position[POS_Y] > MAP_HEIGHT - 1:
     #     my_position[POS_Y] = 0
 
-    #os.system("cls")
-    os.system("clear")
+    os.system("cls")
+    #os.system("clear")
 
 if died:
-    sys.exit("G A M E - O V E R"
-                  "\nMAMAWEBO!")
+    sys.exit("G A M E - O V E R")
     #print("Has muerto")
