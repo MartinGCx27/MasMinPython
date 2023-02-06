@@ -158,13 +158,13 @@ map_objects = [] #Guarda las posiciones de los entrenadores a enfrentar
 died = False
 win = False
 
-#Hacemos que el tamaño del mapa este definido por el tamaño de los obstaculos que subamos
+#Hacemos que el tamanio del mapa este definido por el tamanio de los obstaculos que subamos
 MAP_WIDTH = len(obstacle_definition[0])
 MAP_HEIGHT = len(obstacle_definition)
 
 pokemons_contrincantes = {
     "Lapras": ["Golpe cabeza", "Cascada", "Hidrobomba", "Cola Ferrea"],
-    "Gengar": ["Lenguetazo", "Bomba lodo", "Bola Sombra", "Puño dinamico"],
+    "Gengar": ["Lenguetazo", "Bomba lodo", "Bola Sombra", "Punio dinamico"],
     "Scyther": ["Corte", "Ala de acero", "Tajo aereo", "Tijera X"],
     "Salamance": ["Cola dragon", "Hiperrayo", "Llamarada", "Dragoaliento"]
 }
